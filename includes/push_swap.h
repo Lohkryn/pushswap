@@ -6,7 +6,7 @@
 /*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 19:26:20 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/17 19:43:37 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,10 @@ int		ft_get_chunk_size(int size);
 int		ft_has_chunk(t_stack *a, int min, int max);
 int		ft_pos(t_stack *stack, int rank);
 int		ft_is_sorted(t_stack *a);
-int 	ft_check_sort_return(t_stack *a)
+int		ft_check_sort_return(t_stack *a);
 
 t_stack	*ft_newnode(int value);
 t_stack	*ft_find_min(t_stack *stack);
 t_stack	*ft_stacklast(t_stack *stack);
+
 #endif

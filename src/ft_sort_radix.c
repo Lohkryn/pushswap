@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_radix.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: excalibur <excalibur@student.42.fr>        +#+  +:+       +#+        */
+/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:42:33 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/17 18:23:04 by excalibur        ###   ########.fr       */
+/*   Updated: 2026/11/17 19:41:46 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_count_bits(int max)
 {
-	int bits;
+	int	bits;
 
 	bits = 0;
 	while ((max >> bits) != 0)

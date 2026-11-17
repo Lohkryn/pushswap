@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_move_min_to_top.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
+/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 14:42:38 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/16 14:43:38 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/17 19:47:26 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_move_min_to_top(t_stack **a, t_stack *min)
+void	ft_move_min_to_top(t_stack **a, t_stack *min)
 {
-	t_stack *tmp;
-	int             i;
-	int             size;
+	t_stack	*tmp;
+	int		i;
+	int		size;
 
 	tmp = *a;
 	size = 0;

@@ -1,11 +1,11 @@
 #include "push_swap.h"
 
-static int ft_check_sort(t_stack *a)
+static	int	ft_check_sort(t_stack *a)
 {
-	int m;
-	int pairs;
-	t_stack *current;
-	t_stack *next;
+	int		m;
+	int		pairs;
+	t_stack	*current;
+	t_stack	*next;
 
 	m = 0;
 	pairs = 0;
@@ -27,9 +27,9 @@ static int ft_check_sort(t_stack *a)
 	return (m / pairs);
 }
 
-int ft_check_sort_return(t_stack *a)
+int	ft_check_sort_return(t_stack *a)
 {
-	int	metric;
+	int		metric;
 
 	metric = ft_check_sort(a);
 	if (metric == 0)
