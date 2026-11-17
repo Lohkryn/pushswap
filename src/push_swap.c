@@ -6,7 +6,7 @@
 /*   By: excalibur <excalibur@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:41:07 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 18:23:58 by excalibur        ###   ########.fr       */
+/*   Updated: 2026/11/17 18:49:01 by excalibur        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 	{
 		if (ft_stack_size(a) <=5)
 			ft_short_sort(&a, &b);
-		if ("la fonction de ton calcul return -33%")
+		else if ("la fonction de ton calcul return -33%")
 			ft_selection_sort(&a,&b);
 		else if ("pareil a 50%")
 				ft_chunk_sort(&a, &b, ft_get_chunk_size(ft_stack_size(a)));

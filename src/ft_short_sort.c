@@ -3,9 +3,9 @@
 void    ft_short_sort(t_stack **a, t_stack **b)
 {
     if (ft_stack_size(a) == 2)
-			sa(&a);
+			sa(a);
 	else if (ft_stack_size(a) == 3)
-		ft_sort_three(&a);
+		ft_sort_three(a);
 	else if (ft_stack_size(a) <= 5)
-		ft_sort_five(&a, &b);
+		ft_sort_five(a, b);
 }
