@@ -6,7 +6,7 @@
 /*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:41:07 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 20:25:38 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/17 20:41:26 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ int	main(int argc, char **argv)
 		else
 			ft_sort_radix(&a, &b);
 	}
-	else if (!ft_is_sorted(a) && ft_flag == HIGH)
+	else if (!ft_is_sorted(a) && ft_flag(argv) == HIGH)
 		ft_sort_radix(&a, &b);
-	else if (!ft_is_sorted(a) && ft_flag == MEDIUM)
+	else if (!ft_is_sorted(a) && ft_flag(argv) == MEDIUM)
 		ft_chunk_sort(&a, &b, ft_get_chunk_size(ft_stack_size(a)));
-	else if (!ft_is_sorted(a) && ft_flag == LOW)
+	else if (!ft_is_sorted(a) && ft_flag(argv) == LOW)
 		ft_selection_sort(&a, &b);
 	return (ft_free_stack(&b), ft_free_stack(&a), 0);
 }
