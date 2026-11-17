@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: excalibur <excalibur@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 13:42:16 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/17 18:21:56 by excalibur        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void	ft_bring_for_next_chunk(t_stack **a, int rank);
 void	ft_target_pa(t_stack **a, t_stack **b, int min, int max);
 void	ft_free_stack(t_stack **stack);
 void	ft_selection_sort(t_stack **a, t_stack **b);
-void	ft_sort_engix(t_stack **a, t_stack **b);
+void	ft_sort_radix(t_stack **a, t_stack **b);
+void	ft_short_sort(t_stack **a, t_stack **b);
 
 int		ft_init_stack(int argc, char **argv, t_stack **a);
 int		ft_checkinput(char *nbr);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_engix.c                                    :+:      :+:    :+:   */
+/*   ft_sort_radix.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
+/*   By: excalibur <excalibur@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:42:33 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/17 13:56:12 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/17 18:23:04 by excalibur        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_count_bits(int max)
 	return (bits);
 }
 
-void	ft_sort_engix(t_stack **a, t_stack **b)
+void	ft_sort_radix(t_stack **a, t_stack **b)
 {
 	int	size;
 	int	bits;
