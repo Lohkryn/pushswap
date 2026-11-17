@@ -6,7 +6,7 @@
 /*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 19:43:37 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/17 20:05:43 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define HIGH 3
 # define MEDIUM 2
 # define LOW 1
-
+# define ADAPTIVE 4
 typedef struct s_stack
 {
 	int				value;
