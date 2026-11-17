@@ -6,7 +6,7 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/19 19:52:04 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/17 13:42:16 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ void	ft_push_chunk(t_stack **a, t_stack **b, int min, int max);
 void	ft_bring_for_next_chunk(t_stack **a, int rank);
 void	ft_target_pa(t_stack **a, t_stack **b, int min, int max);
 void	ft_free_stack(t_stack **stack);
+void	ft_selection_sort(t_stack **a, t_stack **b);
+void	ft_sort_engix(t_stack **a, t_stack **b);
 
 int		ft_init_stack(int argc, char **argv, t_stack **a);
 int		ft_checkinput(char *nbr);
@@ -56,8 +58,9 @@ int		ft_stack_size(t_stack *stack);
 int		ft_get_chunk_size(int size);
 int		ft_has_chunk(t_stack *a, int min, int max);
 int		ft_pos(t_stack *stack, int rank);
+int		ft_is_sorted(t_stack *a);
 
 t_stack	*ft_newnode(int value);
-t_stack	*find_min(t_stack *stack);
+t_stack	*ft_find_min(t_stack *stack);
 t_stack	*ft_stacklast(t_stack *stack);
 #endif
