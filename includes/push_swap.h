@@ -6,7 +6,7 @@
 /*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 20:05:43 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/17 20:34:00 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # define MEDIUM 2
 # define LOW 1
 # define ADAPTIVE 4
+
 typedef struct s_stack
 {
 	int				value;
@@ -66,6 +67,7 @@ int		ft_has_chunk(t_stack *a, int min, int max);
 int		ft_pos(t_stack *stack, int rank);
 int		ft_is_sorted(t_stack *a);
 int		ft_check_sort_return(t_stack *a);
+int		ft_flag(char **argv);
 
 t_stack	*ft_newnode(int value);
 t_stack	*ft_find_min(t_stack *stack);
