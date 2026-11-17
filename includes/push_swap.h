@@ -6,7 +6,7 @@
 /*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 20:34:00 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/17 21:32:08 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ft_sort_radix(t_stack **a, t_stack **b);
 void	ft_short_sort(t_stack **a, t_stack **b);
 
 int		ft_init_stack(int argc, char **argv, t_stack **a);
-int		ft_checkinput(char *nbr);
+int		ft_checkinput(char *nbr, int i);
 int		ft_checkduplicate(char **argv);
 int		ft_checkintrange(const char *str);
 int		ft_stack_size(t_stack *stack);

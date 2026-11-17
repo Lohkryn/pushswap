@@ -6,7 +6,7 @@
 /*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:41:07 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 20:41:26 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/17 21:36:37 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (!ft_init_stack(argc, argv, &a))
 		return (1);
-	if (!ft_is_sorted(a) && ft_flag == ADAPTIVE)
+	if (!ft_is_sorted(a) && ft_flag(argv) == ADAPTIVE)
 	{
 		if (ft_stack_size(a) <= 5)
 			ft_short_sort(&a, &b);

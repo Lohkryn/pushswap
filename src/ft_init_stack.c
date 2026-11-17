@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_init_stack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 12:23:14 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/11 12:26:41 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/17 21:33:40 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_init_stack(int argc, char **argv, t_stack **a)
 	i = 1;
 	while (i < argc)
 	{
-		if (!ft_checkinput(argv[i]))
+		if (!ft_checkinput(argv[i], i))
 			return (ft_printf("wrong input\n"), 0);
 		i++;
 	}
