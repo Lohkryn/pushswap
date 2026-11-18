@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/18 17:38:56 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/18 17:42:23 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define LOW 1
 # define ADAPTIVE 4
 
-typedef struct s_stackS
+typedef struct s_stack
 {
 	int				value;
 	int				rank;
@@ -67,7 +67,7 @@ int		ft_get_chunk_size(int size);
 int		ft_has_chunk(t_stack *a, int min, int max);
 int		ft_pos(t_stack *stack, int rank);
 int		ft_is_sorted(t_stack *a);
-int		ft_flag(char **argv);
+int		ft_flag(char **str);
 int	ft_check_flag(char *str);
 
 float	ft_check_sort(t_stack *a);

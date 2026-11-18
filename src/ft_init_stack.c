@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 12:23:14 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/18 17:39:00 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/18 17:48:16 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ int	ft_init_stack(int argc, char **argv, t_stack **a)
 	int		i;
 
 	if (argc < 2 || (argc < 3 && !ft_strncmp(argv[1], "--", 2)))
-		return (ft_printf("need more number\n"), 0);
+		return (ft_putstr_fd("Error\n", 2));
 	if (ft_check_flag(argv[1]) && !ft_strncmp(argv[1], "--", 2))
-		return (ft_printf("wrong flag\n"), 0);
+		return (ft_putstr_fd("Error\n", 2));
 	i = ft_flag(argv[1]);
 	while (i < argc)
 	{
 		if (!ft_checkinput(argv[i]))
-			return (ft_printf("wrong input\n"), 0);
+			return (ft_putstr_fd("Error\n", 2));
 		i++;
 	}
 	if (!ft_checkduplicate(argv))
-		return (ft_printf("Error: duplicate values\n"), 0);
+		return (ft_putstr_fd("Error\n", 2));
 	i = ft_flag(argv[1]);
 	while (i < argc)
 	{

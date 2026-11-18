@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pos.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 09:33:13 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/19 09:50:04 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/18 17:48:18 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	ft_pos(t_stack *stack, int rank)
 		stack = stack->next;
 		pos++;
 	}
-	return (ft_printf("ereur dans le retour de postion"));
+	return (-1);
 }

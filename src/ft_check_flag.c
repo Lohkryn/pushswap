@@ -1,3 +1,5 @@
+#include "push_swap.h"
+
 int ft_check_flag(char *str)
 {
     if (!ft_strcmp(str, "--simple") || !ft_strcmp(str, "--medium") || 
