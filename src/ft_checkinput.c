@@ -14,8 +14,9 @@
 
 int	ft_checkinput(char *nbr, int i)
 {
-	(void)i;
-	if ((i == 2 && ft_flag(&nbr)) || !ft_isnumber(nbr) || !ft_checkintrange(nbr))
+	if ((i == 1 && ft_isnumber(nbr) == 1) || (i == 1 && ft_flag(&nbr) != 0))
+		return (1);
+	if (!ft_isnumber(nbr) || !ft_checkintrange(nbr))
 		return (0);
 	return (1);
 }
