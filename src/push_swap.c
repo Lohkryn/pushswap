@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:41:07 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/18 14:49:41 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/18 17:35:29 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,10 @@ int	main(int argc, char **argv)
 	{
 		if (ft_stack_size(a) <= 5)
 			ft_short_sort(&a, &b);
-		else if(!ft_strcmp(argv[1], "--simple"))
-			ft_selection_sort(&a,&b);
-		else if (!ft_strcmp(argv[1], "--medium"))
-		ft_chunk_sort(&a, &b, ft_get_chunk_size(ft_stack_size(a)));
-		else if (!ft_strcmp(argv[1], "--complex"))
-			ft_sort_radix(&a, &b);
+		else if (!ft_strncmp(argv[1], "--", 2) && ft_strcmp(argv[1], "--adaptive"))
+			ft_select_arg(argv[1], &a, &b);
 		else if (disorder <= 0.2)
-			ft_selection_sort(&a,&b);
+			ft_selection_sort(&a, &b);
 		else if (disorder <= 0.5)
 			ft_chunk_sort(&a, &b, ft_get_chunk_size(ft_stack_size(a)));
 		else

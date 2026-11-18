@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/17 21:32:08 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/18 17:38:56 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define LOW 1
 # define ADAPTIVE 4
 
-typedef struct s_stack
+typedef struct s_stackS
 {
 	int				value;
 	int				rank;
@@ -56,9 +56,10 @@ void	ft_free_stack(t_stack **stack);
 void	ft_selection_sort(t_stack **a, t_stack **b);
 void	ft_sort_radix(t_stack **a, t_stack **b);
 void	ft_short_sort(t_stack **a, t_stack **b);
+void    ft_select_arg(char *str,t_stack **a,t_stack **b);
 
 int		ft_init_stack(int argc, char **argv, t_stack **a);
-int		ft_checkinput(char *nbr, int i);
+int		ft_checkinput(char *nbr);
 int		ft_checkduplicate(char **argv);
 int		ft_checkintrange(const char *str);
 int		ft_stack_size(t_stack *stack);
@@ -66,8 +67,10 @@ int		ft_get_chunk_size(int size);
 int		ft_has_chunk(t_stack *a, int min, int max);
 int		ft_pos(t_stack *stack, int rank);
 int		ft_is_sorted(t_stack *a);
-int		ft_check_sort_return(t_stack *a);
 int		ft_flag(char **argv);
+int	ft_check_flag(char *str);
+
+float	ft_check_sort(t_stack *a);
 
 t_stack	*ft_newnode(int value);
 t_stack	*ft_find_min(t_stack *stack);
