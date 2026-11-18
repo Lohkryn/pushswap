@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (!ft_init_stack(argc, argv, &a))
 		return (1);
-	if (!ft_is_sorted(a) && ft_flag(argv) == ADAPTIVE)
+	if (!ft_is_sorted(a) && (ft_flag(argv) == ADAPTIVE || ft_flag(argv) == 0))
 	{
 		if (ft_stack_size(a) <= 5)
 			ft_short_sort(&a, &b);
