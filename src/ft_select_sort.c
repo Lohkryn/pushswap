@@ -1,4 +1,18 @@
-void	ft_select_arg(char *str,t_stack **a,t_stack **b)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_select_sort.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/19 07:02:57 by hugdelie          #+#    #+#             */
+/*   Updated: 2026/11/19 07:13:25 by hugdelie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+void	ft_select_arg(char *str, t_stack **a, t_stack **b)
 {
 	if (!ft_strcmp(str, "--simple"))
 		ft_selection_sort(a, b);
