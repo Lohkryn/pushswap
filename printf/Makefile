@@ -1,6 +1,6 @@
 NAME = printf.a
 
-SRCS = $(wildcard *.c)
+SRCS = ft_dispatch_args.c ft_printf.c ft_putchar_pf.c ft_puthex_pf.c ft_puthexptr.c ft_putnbr_pf.c ft_putptr_pf.c ft_putstr_pf.c ft_put_unsigned_pf.c
 OBJS = $(SRCS:%.c=%.o)
 
 GCC = gcc
