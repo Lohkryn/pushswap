@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/19 07:16:54 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/20 20:36:24 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,21 @@
 # define LOW 1
 # define ADAPTIVE 4
 
+typedef enum s_ops{
+	SA,
+	SB,
+	SS,
+	PA,
+	PB,
+	RA,
+	RB,
+	RR,
+	RRA,
+	RRB,
+	RRR,
+	TOTAL_OPS
+} t_ops;
+
 typedef struct s_stack
 {
 	int				value;
@@ -29,34 +44,37 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-void	sa(t_stack **a);
-void	sb(t_stack **b);
-void	ss(t_stack **a, t_stack **b);
-void	pa(t_stack **a, t_stack **b);
-void	pb(t_stack **a, t_stack **b);
-void	ra(t_stack **a);
-void	rb(t_stack **b);
-void	rr(t_stack **a, t_stack **b);
-void	rra(t_stack **a);
-void	rrb(t_stack **b);
-void	rrr(t_stack **a, t_stack **b);
+void	sa(t_stack **a, int *ops);
+void	sb(t_stack **b, int *ops);
+void	ss(t_stack **a, t_stack **b, int *ops);
+void	pa(t_stack **a, t_stack **b, int *ops);
+void	pb(t_stack **a, t_stack **b, int *ops);
+void	ra(t_stack **a, int *ops);
+void	rb(t_stack **b, int *ops);
+void	rr(t_stack **a, t_stack **b, int *ops);
+void	rra(t_stack **a, int *ops);
+void	rrb(t_stack **b, int *ops);
+void	rrr(t_stack **a, t_stack **b, int *ops);
 
 void	ft_assign_rank(t_stack *stack);
 void	ft_stackiter(t_stack *stack, void (*f)(t_stack *));
 void	ft_stackadd_back(t_stack **stack, t_stack *new);
 void	ft_print_node(t_stack *node);
-void	ft_sort_three(t_stack **a);
-void	ft_move_min_to_top(t_stack **a, t_stack *min);
-void	ft_sort_five(t_stack **a, t_stack **b);
-void	ft_chunk_sort(t_stack **a, t_stack **b, int chunk_size);
-void	ft_push_chunk(t_stack **a, t_stack **b, int min, int max);
-void	ft_bring_for_next_chunk(t_stack **a, int rank);
-void	ft_target_pa(t_stack **a, t_stack **b, int min, int max);
+void	ft_sort_three(t_stack **a, int *ops);
+void	ft_move_min_to_top(t_stack **a, t_stack *min, int *ops);
+void	ft_sort_five(t_stack **a, t_stack **b, int *ops);
+void	ft_chunk_sort(t_stack **a, t_stack **b, int chunk_size, int *ops);
+void	ft_push_chunk(t_stack **a, t_stack **b, int min, int max, int *ops);
+void	ft_bring_for_next_chunk(t_stack **a, int rank, int *ops);
+void	ft_target_pa(t_stack **a, t_stack **b, int min, int max, int *ops);
 void	ft_free_stack(t_stack **stack);
-void	ft_selection_sort(t_stack **a, t_stack **b);
-void	ft_sort_radix(t_stack **a, t_stack **b);
-void	ft_short_sort(t_stack **a, t_stack **b);
-void	ft_select_arg(char *str, t_stack **a, t_stack **b);
+void	ft_selection_sort(t_stack **a, t_stack **b, int *ops);
+void	ft_sort_radix(t_stack **a, t_stack **b, int *ops);
+void	ft_short_sort(t_stack **a, t_stack **b, int *ops);
+void	ft_select_arg(char *str, t_stack **a, t_stack **b, int *ops);
+void	ft_sorting_strategy(t_stack **a, t_stack **b, char **argv, float disorder, int *ops);
+void	ft_bench(t_stack **a, float disorder, char **argv, int *ops);
+void	ft_print_stack(t_stack *stack);
 
 int		ft_init_stack(int argc, char **argv, t_stack **a);
 int		ft_checkinput(char *nbr);
@@ -67,10 +85,12 @@ int		ft_get_chunk_size(int size);
 int		ft_has_chunk(t_stack *a, int min, int max);
 int		ft_pos(t_stack *stack, int rank);
 int		ft_is_sorted(t_stack *a);
-int		ft_flag(char *str);
+int		ft_flag(char **str);
 int		ft_check_flag(char *str);
+int		ft_error_check(int argc, char **argv);
 
 float	ft_check_sort(t_stack *a);
+char	*ft_log_type(char *str, float disorder);
 
 t_stack	*ft_newnode(int value);
 t_stack	*ft_find_min(t_stack *stack);

@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_short_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 07:04:00 by hugdelie          #+#    #+#             */
-/*   Updated: 2026/11/19 07:04:01 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/20 18:12:16 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_short_sort(t_stack **a, t_stack **b)
+void	ft_short_sort(t_stack **a, t_stack **b, int *ops)
 {
 	if (ft_stack_size(*a) == 2)
-		sa(a);
+		sa(a, ops);
 	else if (ft_stack_size(*a) == 3)
-		ft_sort_three(a);
+		ft_sort_three(a, ops);
 	else if (ft_stack_size(*a) <= 5)
-		ft_sort_five(a, b);
+		ft_sort_five(a, b, ops);
 }

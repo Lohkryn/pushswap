@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 07:10:58 by hugdelie          #+#    #+#             */
-/*   Updated: 2026/11/19 07:11:08 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/20 19:57:48 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ float	ft_check_sort(t_stack *a)
 	}
 	if (pairs == 0)
 		return (0);
-	return (mistakes / pairs);
+	return ((mistakes / pairs) * 100);
 }

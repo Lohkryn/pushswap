@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_three.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 10:58:13 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/16 08:25:08 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/20 18:15:57 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sort_three(t_stack **a)
+void	ft_sort_three(t_stack **a, int *ops)
 {
 	int	first;
 	int	second;
@@ -24,19 +24,19 @@ void	ft_sort_three(t_stack **a)
 	if (first < second && second < third)
 		return ;
 	if (first > second && second < third && first < third)
-		sa(a);
+		sa(a, ops);
 	else if (first > second && second > third)
 	{
-		sa(a);
-		rra(a);
+		sa(a, ops);
+		rra(a, ops);
 	}
 	else if (first > second && second < third && first > third)
-		ra(a);
+		ra(a, ops);
 	else if (first < second && second > third && first < third)
 	{
-		sa(a);
-		ra(a);
+		sa(a, ops);
+		ra(a, ops);
 	}
 	else if (first < second && second > third && first > third)
-		rra(a);
+		rra(a, ops);
 }

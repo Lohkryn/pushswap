@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 02:43:58 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/18 17:36:39 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/20 20:50:35 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_checkduplicate(char **argv)
 	int	i;
 	int	j;
 
-	i = ft_flag(argv[1]);
+	i = ft_flag(argv);
 	while (argv[i])
 	{
 		j = i + 1;

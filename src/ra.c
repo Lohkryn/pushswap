@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 09:38:36 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/15 13:24:59 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/20 18:16:15 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stack **a)
+void	ra(t_stack **a, int *ops)
 {
 	t_stack	*first;
 	t_stack	*last;
@@ -26,5 +26,6 @@ void	ra(t_stack **a)
 		last = last->next;
 	last->next = first;
 	first->next = NULL;
+	ops[RA]++;
 	ft_printf("ra\n");
 }

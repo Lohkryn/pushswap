@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 09:38:56 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/11 09:42:27 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/20 18:16:06 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rb(t_stack **b)
+void	rb(t_stack **b, int *ops)
 {
 	t_stack	*first;
 	t_stack	*last;
@@ -26,5 +26,6 @@ void	rb(t_stack **b)
 		last = last->next;
 	last->next = first;
 	first->next = NULL;
+	ops[RB]++;
 	ft_printf("rb\n");
 }

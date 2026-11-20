@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 03:19:12 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/15 13:41:59 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/20 18:14:55 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
-void	pa(t_stack **a, t_stack **b)
+void	pa(t_stack **a, t_stack **b, int *ops)
 {
 	t_stack	*tmp;
 
@@ -22,5 +23,6 @@ void	pa(t_stack **a, t_stack **b)
 	tmp->next = NULL;
 	tmp->next = *a;
 	*a = tmp;
+	ops[PA]++;
 	ft_printf("pa\n");
 }

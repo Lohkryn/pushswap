@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:41:07 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/19 07:15:18 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/20 20:34:57 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,19 @@ int	main(int argc, char **argv)
 	t_stack	*a;
 	t_stack	*b;
 	float	disorder;
+	int	*ops;
 
+	ops = calloc(TOTAL_OPS, sizeof(int));
 	a = NULL;
 	b = NULL;
 	if (!ft_init_stack(argc, argv, &a))
 		return (1);
 	disorder = ft_check_sort(a);
 	if (!ft_is_sorted(a))
-	{
-		if (ft_stack_size(a) <= 5)
-			ft_short_sort(&a, &b);
-		else if (!ft_strncmp(argv[1], "--", 2)
-			&& ft_strcmp(argv[1], "--adaptive"))
-			ft_select_arg(argv[1], &a, &b);
-		else if (disorder <= 0.2)
-			ft_selection_sort(&a, &b);
-		else if (disorder <= 0.5)
-			ft_chunk_sort(&a, &b, ft_get_chunk_size(ft_stack_size(a)));
-		else
-			ft_sort_radix(&a, &b);
-	}
+		ft_sorting_strategy(&a, &b, argv, disorder, ops);
 	ft_free_stack(&a);
+	if (argv[1] && !ft_strncmp(argv[1], "--bench", 7))
+		ft_bench(&a, disorder, argv, ops);
+	free(ops);
 	return (ft_free_stack(&b), 0);
 }

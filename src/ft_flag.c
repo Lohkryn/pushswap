@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_flag.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 07:11:23 by hugdelie          #+#    #+#             */
-/*   Updated: 2026/11/19 07:12:29 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/20 19:17:37 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_flag(char *str)
+int	ft_flag(char **argv)
 {
-	if (!ft_strncmp(str, "--", 2))
-		return (2);
-	return (1);
+	int	i;
+
+	i = 1;
+	while (argv[i] && ft_strncmp(argv[i], "--", 2))
+		i++;
+	return (i);
 }

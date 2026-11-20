@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_error_check.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/20 19:19:41 by ketolba           #+#    #+#             */
+/*   Updated: 2026/11/20 20:51:34 by ketolba          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+int	ft_error_check(int argc, char **argv)
+{
+	int	i;
+
+	if(argc < 4 && !ft_check_flag(argv[1]) && (argc == 2 || ft_check_flag(argv[2])))
+		return (1);
+	if (!ft_check_flag(argv[1]) && !ft_strncmp(argv[1], "--", 2))
+		return (1);
+	i = ft_flag(argv);
+	while (i < argc)
+	{
+		if (!ft_checkinput(argv[i]))
+			return (1);
+		i++;
+	}
+	if (!ft_checkduplicate(argv))
+		return (1);
+	return (0);
+}

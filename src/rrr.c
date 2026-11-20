@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   rrr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 09:43:51 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/14 16:05:22 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/20 17:46:46 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rrr(t_stack **a, t_stack **b)
+void	rrr(t_stack **a, t_stack **b, int *ops)
 {
-	rra(a);
-	rrb(b);
+	rra(a, ops);
+	rrb(b, ops);
+	ops[RRA]--;
+	ops[RRB]--;
+	ops[RRR]++;
 	ft_printf("rrr\n");
 }

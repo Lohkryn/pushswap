@@ -3,17 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 03:08:45 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/14 20:12:34 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/20 20:37:56 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
 
-void	ss(t_stack **a, t_stack **b)
+#include "push_swap.h"
+void ss(t_stack **a, t_stack **b, int *ops)
 {
-	sa(a);
-	sb(b);
+	sa(a, ops);
+	sb(b, ops);
+	ops[SA]--;
+	ops[SB]--;
+	ops[SS]++;
 	ft_printf("ss\n");
 }

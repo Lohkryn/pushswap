@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_target_pa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:19:17 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/19 19:40:54 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/20 20:37:54 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_target_pa(t_stack **a, t_stack **b, int min, int max)
+void	ft_target_pa(t_stack **a, t_stack **b, int min, int max, int *ops)
 {
 	while (min <= max)
 	{
@@ -20,16 +20,16 @@ void	ft_target_pa(t_stack **a, t_stack **b, int min, int max)
 			return ;
 		if ((*b)->rank == min)
 		{
-			pa(a, b);
-			ra(a);
+			pa(a, b, ops);
+			ra(a, ops);
 			min++;
 		}
 		else if ((*b)->rank == max)
 		{
-			pa(a, b);
+			pa(a, b, ops);
 			max--;
 		}
 		else
-			rb(b);
+			rb(b, ops);
 	}
 }

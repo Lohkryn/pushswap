@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bring_to_next_chunk.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 19:21:21 by ktolba            #+#    #+#             */
-/*   Updated: 2025/10/19 19:50:50 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/20 18:16:12 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_bring_for_next_chunk(t_stack **a, int rank)
+void	ft_bring_for_next_chunk(t_stack **a, int rank, int *ops)
 {
 	int	pos;
 	int	size;
@@ -26,11 +26,11 @@ void	ft_bring_for_next_chunk(t_stack **a, int rank)
 	if (pos <= size / 2)
 	{
 		while (ft_stacklast(*a)->rank != rank)
-			ra(a);
+			ra(a, ops);
 	}
 	else
 	{
 		while (ft_stacklast(*a)->rank != rank)
-			rra(a);
+			rra(a, ops);
 	}
 }

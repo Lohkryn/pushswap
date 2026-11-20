@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_radix.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:42:33 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/17 19:41:46 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/20 18:15:59 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_count_bits(int max)
 	return (bits);
 }
 
-void	ft_sort_radix(t_stack **a, t_stack **b)
+void	ft_sort_radix(t_stack **a, t_stack **b, int *ops)
 {
 	int	size;
 	int	bits;
@@ -38,13 +38,13 @@ void	ft_sort_radix(t_stack **a, t_stack **b)
 		while (i < size)
 		{
 			if ((((*a)->rank >> bit) & 1) == 0)
-				pb(a, b);
+				pb(a, b, ops);
 			else
-				ra(a);
+				ra(a, ops);
 			i++;
 		}
 		while (*b)
-			pa(a, b);
+			pa(a, b, ops);
 		bit++;
 	}
 }
