@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/21 10:25:05 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:17:46 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ft_selection_sort(t_stack **a, t_stack **b, int *ops);
 void	ft_sort_radix(t_stack **a, t_stack **b, int *ops);
 void	ft_short_sort(t_stack **a, t_stack **b, int *ops);
 void	ft_select_arg(char *str, t_stack **a, t_stack **b, int *ops);
-void	ft_sorting_strategy(t_stack **a, t_stack **b, char **argv, float disorder, int *ops);
+void	ft_sorting_strategy(t_stack **a, t_stack **b, char **argv, int *ops);
 void	ft_bench(int disorder, char **argv, int *ops);
 void	ft_print_stack(t_stack *stack);
 

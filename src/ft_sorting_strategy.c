@@ -6,16 +6,18 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 16:18:36 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/21 10:32:54 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:15:49 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sorting_strategy(t_stack **a, t_stack **b, char **argv, float disorder, int *ops)
+void	ft_sorting_strategy(t_stack **a, t_stack **b, char **argv, int *ops)
 {
 	int	strategy;
+	int	disorder;
 
+	disorder = ft_check_sort(*a);
 	if (argv[1] && !ft_strcmp(argv[1], "--bench"))
 		strategy = 2;
 	else

@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:41:07 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/21 12:22:35 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:18:06 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	}
 	disorder = ft_check_sort(a);
 	if (!ft_is_sorted(a))
-		ft_sorting_strategy(&a, &b, argv, disorder, ops);
+		ft_sorting_strategy(&a, &b, argv, ops);
 	if (argv[1] && !ft_strncmp(argv[1], "--bench", 7))
 		ft_bench(disorder, argv, ops);
 	ft_free_stack(&a);
