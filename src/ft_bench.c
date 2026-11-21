@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 12:24:40 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/20 20:35:55 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/20 21:06:07 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void    ft_bench(t_stack **a, float disorder, char **argv, int *ops)
 	i = 0;
 	while (i < TOTAL_OPS)
 	{
-		ops[TOTAL_OPS] += ops[i];
+		ops[TOTAL_OPS - 1] += ops[i];
 		i++;
 	}
     ft_printf("[bench] disorder: %d%%\n",ft_check_sort(*a));

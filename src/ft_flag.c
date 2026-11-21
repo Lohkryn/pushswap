@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 07:11:23 by hugdelie          #+#    #+#             */
-/*   Updated: 2026/11/20 19:17:37 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 09:28:22 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_flag(char **argv)
 	int	i;
 
 	i = 1;
-	while (argv[i] && ft_strncmp(argv[i], "--", 2))
+	while (argv[i] && !ft_strncmp(argv[i], "--", 2))
 		i++;
 	return (i);
 }

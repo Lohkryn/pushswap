@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:41:07 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/20 20:34:57 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/20 21:07:17 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	float	disorder;
 	int	*ops;
 
-	ops = calloc(TOTAL_OPS, sizeof(int));
+	ops = ft_calloc(TOTAL_OPS, sizeof(int));
 	a = NULL;
 	b = NULL;
 	if (!ft_init_stack(argc, argv, &a))
