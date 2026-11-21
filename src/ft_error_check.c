@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error_check.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 19:19:41 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/21 11:24:32 by hugdelie         ###   ########.fr       */
+/*   Updated: 2026/11/21 12:59:46 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,14 @@ int	ft_error_check(int argc, char **argv)
 {
 	int	i;
 
-	if (argc < 2)
-		return (1);
-	if (argc == 2 && ft_check_flag(argv[1]))
-		return (1);
-	if (argc > 2)
-	{
-		if (argc == 3 && ft_check_flag(argv[1]) && ft_check_flag(argv[2]))
-			return (1);
-		if(argc < 4 && !ft_check_flag(argv[1]) && (argc == 2 || ft_check_flag(argv[2])))
-			return (1);
-		if (argc > 3 && !ft_check_flag(argv[2]) && !ft_isnumber(argv[2]))
-			return (1);
-		if ((!ft_check_flag(argv[1]) && !ft_strncmp(argv[1], "--", 2))|| !strcmp(argv[2], "--bench"))
-			return (1);
-		if (!ft_strcmp(argv[1], "--bench") && ft_strncmp(argv[1], "--", 2) &&  ft_strncmp(argv[2], "--", 2))
-			return (1);
-	}
 	i = ft_flag(argv);
+	if (i >= argc || i > 3)
+		return (1);
+		if ((i >= 2 && ft_check_flag(argv[1])
+			|| (i == 3 && ft_check_flag(argv[2])
+				|| ft_strcmp(argv[1], "--bench"))
+				|| !ft_strcmp(argv[2], "--bench")))
+			return (1);
 	while (i < argc)
 	{
 		if (!ft_checkinput(argv[i]))

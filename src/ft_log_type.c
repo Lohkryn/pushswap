@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 19:35:19 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/20 21:09:37 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:02:32 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char *ft_log_type(char *str, float disorder)
 		else
 			return ("Adaptive / O(n log n)\n");
 	}
-	return ("Unknown strategy\n");
+	return ("Adaptive / O(n log n)\n");
 }
