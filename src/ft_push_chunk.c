@@ -6,14 +6,19 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:55:50 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/20 18:12:19 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:51:54 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_push_chunk(t_stack **a, t_stack **b, int min, int max, int *ops)
+void	ft_push_chunk(t_stack **a, t_stack **b, int range[2], int *ops)
 {
+	int min;
+	int max;
+
+	min = range[0];
+	max = range[1];
 	while (ft_has_chunk(*a, min, max))
 	{
 		if ((*a)->rank >= min && (*a)->rank < max)

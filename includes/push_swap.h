@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/21 13:31:27 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:52:00 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,9 @@ void	ft_sort_three(t_stack **a, int *ops);
 void	ft_move_min_to_top(t_stack **a, t_stack *min, int *ops);
 void	ft_sort_five(t_stack **a, t_stack **b, int *ops);
 void	ft_chunk_sort(t_stack **a, t_stack **b, int chunk_size, int *ops);
-void	ft_push_chunk(t_stack **a, t_stack **b, int min, int max, int *ops);
+void	ft_push_chunk(t_stack **a, t_stack **b, int range[2], int *ops);
 void	ft_bring_for_next_chunk(t_stack **a, int rank, int *ops);
-void	ft_target_pa(t_stack **a, t_stack **b, int min, int max, int *ops);
+void	ft_target_pa(t_stack **a, t_stack **b, int range[2], int *ops);
 void	ft_free_stack(t_stack **stack);
 void	ft_selection_sort(t_stack **a, t_stack **b, int *ops);
 void	ft_sort_radix(t_stack **a, t_stack **b, int *ops);
