@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 19:19:41 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/21 13:21:12 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:40:23 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ int	ft_error_check(int argc, char **argv)
 		return (1);
 	if ((i >= 2 && !ft_check_flag(argv[1]))
 		|| (i == 3 && (!ft_check_flag(argv[2])
-			|| ft_strcmp(argv[1], "--bench")
+				|| ft_strcmp(argv[1], "--bench")
 				|| !ft_strcmp(argv[2], "--bench"))))
-					return (1);
+	{
+		return (1);
+	}
 	while (i < argc)
 	{
 		if (!ft_checkinput(argv[i]))

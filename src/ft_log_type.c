@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_log_type.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
+/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 19:35:19 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/21 13:02:32 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:11:50 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char *ft_log_type(char *str, float disorder)
+char	*ft_log_type(char *str, float disorder)
 {
 	if (!ft_strcmp(str, "--simple"))
 		return ("simple / O(n2 )\n");

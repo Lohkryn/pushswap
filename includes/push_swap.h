@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:13:27 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/21 13:17:46 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:31:27 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
 # define LOW 1
 # define ADAPTIVE 4
 
-typedef enum s_ops{
+typedef enum s_ops
+{
 	SA,
 	SB,
 	SS,
@@ -35,7 +36,7 @@ typedef enum s_ops{
 	RRB,
 	RRR,
 	TOTAL_OPS
-} t_ops;
+}	t_ops;
 
 typedef struct s_stack
 {
