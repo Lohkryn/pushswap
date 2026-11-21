@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:41:07 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/20 21:07:17 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 10:25:48 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	float	disorder;
 	int	*ops;
 
-	ops = ft_calloc(TOTAL_OPS, sizeof(int));
+	ops = ft_calloc(TOTAL_OPS , sizeof(int));
 	a = NULL;
 	b = NULL;
 	if (!ft_init_stack(argc, argv, &a))
@@ -27,9 +27,9 @@ int	main(int argc, char **argv)
 	disorder = ft_check_sort(a);
 	if (!ft_is_sorted(a))
 		ft_sorting_strategy(&a, &b, argv, disorder, ops);
-	ft_free_stack(&a);
 	if (argv[1] && !ft_strncmp(argv[1], "--bench", 7))
-		ft_bench(&a, disorder, argv, ops);
+		ft_bench(disorder, argv, ops);
+	ft_free_stack(&a);
 	free(ops);
 	return (ft_free_stack(&b), 0);
 }
