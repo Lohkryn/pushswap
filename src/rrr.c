@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 09:43:51 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/20 17:46:46 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 12:37:58 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	rrr(t_stack **a, t_stack **b, int *ops)
 	ops[RRA]--;
 	ops[RRB]--;
 	ops[RRR]++;
-	ft_printf("rrr\n");
+	write(1, "rrr\n", 4);
 }

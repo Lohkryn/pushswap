@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_pf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:12:06 by ktolba            #+#    #+#             */
-/*   Updated: 2025/06/06 16:04:07 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:34:48 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_putchar_pf(char c)
 {
-	write(1, &c, 1);
+	write(2, &c, 1);
 	return (1);
 }

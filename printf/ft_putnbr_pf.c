@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:18:17 by ktolba            #+#    #+#             */
-/*   Updated: 2025/06/06 16:03:41 by ktolba           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:35:11 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_putnbr_pf(int nb)
 	len = 0;
 	if (nbr < 0)
 	{
-		write(1, "-", 1);
+		write(2, "-", 1);
 		nbr *= -1;
 		len++;
 	}

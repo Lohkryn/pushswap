@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 03:08:14 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/20 20:37:17 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 12:38:10 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void sb(t_stack **b, int *ops)
 	second->next = first;
 	*b = second;
 	ops[SB]++;
-	ft_printf("sb\n");
+	write(1, "sb\n", 3);
 }

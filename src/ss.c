@@ -6,11 +6,12 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 03:08:45 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/20 20:37:56 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 12:38:17 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 void ss(t_stack **a, t_stack **b, int *ops)
 {
 	sa(a, ops);
@@ -18,5 +19,5 @@ void ss(t_stack **a, t_stack **b, int *ops)
 	ops[SA]--;
 	ops[SB]--;
 	ops[SS]++;
-	ft_printf("ss\n");
+	write(1, "ss\n", 3);
 }

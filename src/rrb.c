@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 09:44:46 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/20 18:15:28 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 12:38:29 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	rrb(t_stack **b, int *ops)
 	last->next = *b;
 	*b = last;
 	ops[RRB]++;
-	ft_printf("rrb\n");
+	write(1, "rrb\n", 4);
 }
