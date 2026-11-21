@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   sb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
+/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 03:08:14 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/21 12:38:10 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:09:43 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void sb(t_stack **b, int *ops)
+void	sb(t_stack **b, int *ops)
 {
-	t_stack *first;
-	t_stack *second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!b || !*b || !(*b)->next)
-		return;
+		return ;
 	first = *b;
 	second = (*b)->next;
 	first->next = second->next;
