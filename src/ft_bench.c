@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bench.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
+/*   By: hugdelie <hugdelie@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 12:24:40 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/21 10:57:02 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 11:35:16 by hugdelie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void    ft_bench(int disorder, char **argv, int *ops)
 	int i;
 	int	total_ops;
 
-	tf (!argv[1])
-		return(ft_putstr_fd("Error\n", 2)); ;
+	if (!argv[1])
+		return(ft_putstr_fd("Error\n", 2));
 	total_ops = 0;
 	i = 0;
 	while (i <= TOTAL_OPS)
