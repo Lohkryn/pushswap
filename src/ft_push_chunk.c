@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:55:50 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/21 13:51:54 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 14:03:40 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_push_chunk(t_stack **a, t_stack **b, int range[2], int *ops)
 {
-	int min;
-	int max;
+	int	min;
+	int	max;
 
 	min = range[0];
 	max = range[1];

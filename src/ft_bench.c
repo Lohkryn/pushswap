@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 12:24:40 by ketolba           #+#    #+#             */
-/*   Updated: 2026/11/21 13:37:35 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 14:14:25 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bench(int disorder, char **argv, int *ops)
 	int	total_ops;
 
 	if (!argv[1])
-		return(ft_putstr_fd("Error\n", 2));
+		return (ft_putstr_fd("Error\n", 2));
 	total_ops = 0;
 	i = 0;
 	while (i < TOTAL_OPS)
@@ -26,9 +26,11 @@ void	ft_bench(int disorder, char **argv, int *ops)
 		total_ops += ops[i];
 		i++;
 	}
-    ft_printf ("[bench] disorder: %d%%\n", disorder);
-    ft_printf ("[bench] strategy: %s", ft_log_type(argv[2], disorder));
-    ft_printf ("[bench] total_ops: %d\n", total_ops);
-    ft_printf ("[bench] sa: %d sb: %d ss: %d pa:%d pb:%d\n", ops[SA], ops[SB], ops[SS], ops[PA], ops[PB]);
-    ft_printf ("[bench] ra: %d rb: %d rr: %d rra: %d rrb: %d rrr: %d\n", ops[RA], ops[RB], ops[RR], ops[RRA], ops[RRB], ops[RRR]);
+	ft_printf("[bench] disorder: %d%%\n", disorder);
+	ft_printf("[bench] strategy: %s", ft_log_type(argv[2], disorder));
+	ft_printf("[bench] total_ops: %d\n", total_ops);
+	ft_printf("[bench] sa: %d sb: %d ss: %d ", ops[SA], ops[SB], ops[SS]);
+	ft_printf("pa: %d pb: %d\n", ops[PA], ops[PB]);
+	ft_printf("[bench] ra: %d rb: %d rr: %d ", ops[RA], ops[RB], ops[RR]);
+	ft_printf("rra: %d rrb: %d rrr: %d\n", ops[RRA], ops[RRB], ops[RRR]);
 }

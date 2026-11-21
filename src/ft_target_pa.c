@@ -6,7 +6,7 @@
 /*   By: ketolba <ketolba@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:19:17 by ktolba            #+#    #+#             */
-/*   Updated: 2026/11/21 13:54:57 by ketolba          ###   ########.fr       */
+/*   Updated: 2026/11/21 14:03:28 by ketolba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_target_pa(t_stack **a, t_stack **b, int range[2], int *ops)
 {
-	int min;
-	int max;
+	int	min;
+	int	max;
 
 	min = range[0];
 	max = range[1] - 1;
